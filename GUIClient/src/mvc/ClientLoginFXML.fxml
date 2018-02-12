@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:controller="mvc.LoginController" maxHeight="350"
+	maxWidth="350" minHeight="200" minWidth="200" prefHeight="89.0"
+	prefWidth="390.0" spacing="5.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<Label text="Benutzername:">
+			<VBox.margin>
+				<Insets />
+			</VBox.margin>
+		</Label>
+		<TextField fx:id="usernameTextField" alignment="CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			prefHeight="25.0" prefWidth="301.0" />
+		<Label text="Server-IP:">
+			<VBox.margin>
+				<Insets />
+			</VBox.margin>
+		</Label>
+		<TextField fx:id="serverIPTextField" alignment="CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			prefHeight="25.0" prefWidth="301.0" />
+		<Button mnemonicParsing="false" text="Anmelden" fx:id="loginButton"
+			onAction="#setOnLoginClicked" defaultButton="true"/>
+	</children>
+	<padding>
+		<Insets top="5.0" />
+	</padding>
+</VBox>

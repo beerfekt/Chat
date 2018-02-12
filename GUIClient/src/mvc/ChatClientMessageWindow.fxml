@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="mvc.Controller" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="200" minWidth="250" prefHeight="200"
+	prefWidth="600.0" spacing="5.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:id="vBox">
+
+	<MenuBar BorderPane.alignment="CENTER">
+		<menus>
+			<Menu mnemonicParsing="false" text="Verbinden">
+				<items>
+					<MenuItem fx:id="connect" mnemonicParsing="false"
+						onAction="#connect" text="Verbinden" />
+					<MenuItem fx:id="disconnect" disable="true"
+						mnemonicParsing="false" onAction="#disconnect" text="Verbindung trennen" />
+					<SeparatorMenuItem mnemonicParsing="false" />
+					<MenuItem fx:id="close" mnemonicParsing="false" onAction="#close"
+						text="Schließen" />
+				</items>
+			</Menu>
+		</menus>
+	</MenuBar>
+
+	<children>
+		<ScrollPane prefHeight="200.0" prefWidth="200.0" maxHeight="-Infinity" fx:id="scrollPane">
+			<content>
+				<VBox layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity"
+					prefHeight="200.0" prefWidth="586.0" fx:id="messageArea" />
+			</content>
+		</ScrollPane>
+		<HBox prefHeight="100.0" prefWidth="200.0">
+			<children>
+				<TextField prefHeight="25.0" prefWidth="250.0"
+					text="Bitte Nachricht eingeben..." fx:id="message" />
+				<Button mnemonicParsing="false" text="Send &gt;" fx:id="send"
+					onAction="#setOnSendClicked" />
+			</children>
+		</HBox>
+		<Label fx:id="clientIPLabel" text="Verbunden als:" />
+		<Label fx:id="serverIPLabel" text="Verbunden mit:" />
+	</children>
+	<padding>
+		<Insets top="5.0" />
+	</padding>
+</VBox>
